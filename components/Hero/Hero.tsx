@@ -11,18 +11,34 @@ export default function Hero() {
     offset: ['start start', 'end end'],
   });
 
-  const laptopRotateX = useTransform(scrollYProgress, [0, 0.5], [60, 0]);
-  const laptopScale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
-  const contentOpacity = useTransform(scrollYProgress, [0.4, 0.6], [0, 1]);
-  const contentY = useTransform(scrollYProgress, [0.4, 0.6], [50, 0]);
-  const headingOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  const laptopRotateX = useTransform(scrollYProgress, [0, 0.52], [68, 0]);
+  const laptopScale = useTransform(scrollYProgress, [0, 0.55], [0.82, 1]);
+  const contentOpacity = useTransform(scrollYProgress, [0.28, 0.58], [0, 1]);
+  const contentY = useTransform(scrollYProgress, [0.28, 0.58], [36, 0]);
+  const headingOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 1]);
+  const headingX = useTransform(scrollYProgress, [0, 0.6], [0, 150]);
+  const headingY = useTransform(scrollYProgress, [0, 0.6], [0, -32]);
+  const headingScale = useTransform(scrollYProgress, [0, 0.6], [1, 0.4]);
 
   return (
-    <section ref={containerRef} className="relative h-[300vh] bg-black text-white">
-      <div className="sticky top-0 flex h-screen flex-col items-center justify-center overflow-hidden">
-        <motion.div style={{ opacity: headingOpacity }} className="absolute top-16 z-10 text-center">
-          <h1 className="text-5xl font-bold tracking-tight md:text-7xl">Nandini Srivastava</h1>
-          <p className="mt-2 text-gray-400">Scroll to open studio</p>
+    <section ref={containerRef} className="hero-grid relative h-[300vh] bg-[#070707] text-white">
+      <div className="hero-glow pointer-events-none absolute inset-0" />
+      <div className="hero-glass hero-glass-one pointer-events-none absolute" />
+      <div className="hero-glass hero-glass-two pointer-events-none absolute" />
+      <div className="hero-glass hero-glass-three pointer-events-none absolute" />
+      <div className="sticky top-0 flex h-screen flex-col items-center justify-center overflow-hidden px-5">
+        <motion.div
+          style={{ opacity: headingOpacity, x: headingX, y: headingY, scale: headingScale }}
+          className="absolute top-14 left-1/2 z-30 w-[min(90vw,72rem)] -translate-x-1/2 px-2"
+        >
+          <div className="mb-5 flex items-center justify-between text-[10px] uppercase tracking-[0.28em] text-white/45">
+            <span>Scroll to unfold</span>
+          </div>
+          <h1 className="max-w-5xl text-[clamp(3.8rem,12vw,10.5rem)] font-black uppercase leading-[0.78] tracking-[-0.07em]">
+            Nandini
+            <br />
+            Srivastava
+          </h1>
         </motion.div>
         <Laptop
           rotateX={laptopRotateX}

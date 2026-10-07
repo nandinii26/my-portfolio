@@ -22,5 +22,77 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+::selection {
+  background: #e7ff53;
+  color: #070707;
+}
+
+.hero-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.09), transparent 30%),
+    #070707;
+  background-size: 4rem 4rem, 4rem 4rem, auto, auto;
+}
+
+.hero-glow {
+  background: linear-gradient(110deg, transparent 20%, rgba(255, 255, 255, 0.05) 47%, transparent 54%);
+  mask-image: linear-gradient(to bottom, transparent, black 25%, black 70%, transparent);
+}
+
+.hero-glass {
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  background: linear-gradient(110deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.015) 42%, rgba(255, 255, 255, 0.1));
+  box-shadow: inset 0 0 2rem rgba(255, 255, 255, 0.07), 0 0 2.5rem rgba(255, 255, 255, 0.06);
+  filter: blur(0.2px);
+  opacity: 0.75;
+}
+
+.hero-glass::after {
+  position: absolute;
+  inset: 0.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  content: '';
+}
+
+.hero-glass-one {
+  top: 9%;
+  right: 9%;
+  height: 29%;
+  width: 18%;
+  transform: rotate(19deg);
+}
+
+.hero-glass-two {
+  top: 19%;
+  left: 7%;
+  height: 42%;
+  width: 12%;
+  transform: rotate(-24deg);
+  opacity: 0.48;
+}
+
+.hero-glass-three {
+  right: 27%;
+  bottom: 12%;
+  height: 18%;
+  width: 30%;
+  transform: rotate(-8deg);
+  opacity: 0.3;
+}
+
+@media (max-width: 640px) {
+  .hero-glass-one {
+    right: -10%;
+    width: 35%;
+  }
+
+  .hero-glass-two {
+    left: -8%;
+    width: 24%;
+  }
 }
