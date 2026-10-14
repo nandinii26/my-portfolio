@@ -22,14 +22,7 @@ export default function Hero() {
   const screenScale = useTransform(scrollYProgress, [0, 0.6], [0.96, 1]);
 
   return (
-    <section ref={containerRef} className="hero-grid relative h-[300vh] bg-[#070707] text-white">
-      <div className="hero-glow pointer-events-none absolute inset-0" />
-      <div className="hero-glass hero-glass-one pointer-events-none absolute" />
-      <div className="hero-glass hero-glass-two pointer-events-none absolute" />
-      <div className="hero-glass hero-glass-three pointer-events-none absolute" />
-      <div className="hero-static-glass hero-static-glass-one pointer-events-none absolute" />
-      <div className="hero-static-glass hero-static-glass-two pointer-events-none absolute" />
-      <div className="hero-static-glass hero-static-glass-three pointer-events-none absolute" />
+    <section ref={containerRef} className="hero-grid relative h-[300vh] bg-transparent text-white">
       <div className="relative z-10 sticky top-0 flex h-screen flex-col items-center justify-center overflow-hidden px-5">
         <motion.div
           style={{ opacity: headingOpacity, x: headingX, y: headingY, scale: headingScale }}

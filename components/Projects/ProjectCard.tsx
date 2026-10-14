@@ -22,9 +22,9 @@ export default function ProjectCard({ title, category, year, link, image }: Proj
             src={image}
             alt={title}
             fill
-            className="object-cover object-top opacity-250 transition-all duration-500 group-hover:scale-105 group-hover:opacity-300"
+            className="object-cover object-top opacity-80 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/75 to-neutral-950/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/60 to-transparent" />
         </div>
       ) : (
         <div className="absolute inset-0 bg-neutral-800 opacity-20 transition-opacity group-hover:opacity-40" />
