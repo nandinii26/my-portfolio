@@ -13,12 +13,13 @@ export default function Hero() {
 
   const laptopRotateX = useTransform(scrollYProgress, [0, 0.52], [68, 0]);
   const laptopScale = useTransform(scrollYProgress, [0, 0.55], [0.82, 1]);
-  const contentOpacity = useTransform(scrollYProgress, [0.28, 0.58], [0, 1]);
-  const contentY = useTransform(scrollYProgress, [0.28, 0.58], [36, 0]);
+  const contentOpacity = useTransform(scrollYProgress, [0.3, 0.66], [0, 1]);
+  const contentY = useTransform(scrollYProgress, [0.3, 0.66], [36, 0]);
   const headingOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 1]);
   const headingX = useTransform(scrollYProgress, [0, 0.6], [0, 150]);
   const headingY = useTransform(scrollYProgress, [0, 0.6], [0, -32]);
-  const headingScale = useTransform(scrollYProgress, [0, 0.6], [1, 0.4]);
+  const headingScale = useTransform(scrollYProgress, [0, 0.6], [1, 0.55]);
+  const screenScale = useTransform(scrollYProgress, [0, 0.6], [0.96, 1]);
 
   return (
     <section ref={containerRef} className="hero-grid relative h-[300vh] bg-[#070707] text-white">
@@ -26,7 +27,10 @@ export default function Hero() {
       <div className="hero-glass hero-glass-one pointer-events-none absolute" />
       <div className="hero-glass hero-glass-two pointer-events-none absolute" />
       <div className="hero-glass hero-glass-three pointer-events-none absolute" />
-      <div className="sticky top-0 flex h-screen flex-col items-center justify-center overflow-hidden px-5">
+      <div className="hero-static-glass hero-static-glass-one pointer-events-none absolute" />
+      <div className="hero-static-glass hero-static-glass-two pointer-events-none absolute" />
+      <div className="hero-static-glass hero-static-glass-three pointer-events-none absolute" />
+      <div className="relative z-10 sticky top-0 flex h-screen flex-col items-center justify-center overflow-hidden px-5">
         <motion.div
           style={{ opacity: headingOpacity, x: headingX, y: headingY, scale: headingScale }}
           className="absolute top-14 left-1/2 z-30 w-[min(90vw,72rem)] -translate-x-1/2 px-2"
@@ -43,6 +47,7 @@ export default function Hero() {
         <Laptop
           rotateX={laptopRotateX}
           scale={laptopScale}
+          screenScale={screenScale}
           contentOpacity={contentOpacity}
           contentY={contentY}
         />
