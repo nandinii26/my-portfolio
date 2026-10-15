@@ -30,7 +30,7 @@ export default function Laptop({ rotateX, scale, screenScale, contentOpacity, co
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400/80" />
                 <span>Available for projects</span>
               </div>
-              <span>NS &mdash; Portfolio</span>
+              <span>NS</span>
             </div>
             <motion.div
               style={{ opacity: contentOpacity, y: contentY }}
@@ -50,15 +50,11 @@ export default function Laptop({ rotateX, scale, screenScale, contentOpacity, co
                 </div>
               </div>
               <div className="min-w-0 max-w-xl">
-                <p className="mb-2 text-[9px] uppercase tracking-[0.24em] text-white/50 sm:text-[10px] md:text-xs">
+                <p className="mb-2 text-[15px] uppercase tracking-[0.24em] text-white/80 sm:text-[15px] md:text-xs">
                   Hello, I&apos;m Nandini
                 </p>
-                <h2 className="text-[clamp(1.35rem,3.4vw,2.75rem)] font-black uppercase leading-[0.9] tracking-[-0.05em] text-white">
-                  Building digital worlds with intent.
-                </h2>
-                <p className="mt-3 max-w-md text-[11px] leading-relaxed text-white/60 sm:text-xs md:text-sm">
-                  Full-stack developer and visual thinker crafting expressive, dependable experiences for the web.
-                </p>
+                <p className="mt-3 max-w-md text-[30px] leading-relaxed text-white/90 sm:text-xs md:text-sm">
+a Full Stack Developer passionate about crafting intuitive UIs and efficient backend systems. I thrive on solving tricky problems and turning ideas into polished, high-impact applications. Let’s create something great together!                </p>
               </div>
             </motion.div>
           </div>

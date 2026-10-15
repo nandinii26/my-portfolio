@@ -1,6 +1,7 @@
 import ProjectCard from './ProjectCard';
 import docpilotImg from '../docpilot.png';
 import githubImg from '../github.png';
+import revive from '../revivepay.png'
 
 export default function Projects() {
   return (
@@ -16,6 +17,20 @@ export default function Projects() {
         />
         <ProjectCard
           title="GITHUB INTELLIGENCE"
+          category="WEB APP"
+          year="2026"
+          link="https://github-intelligence-one.vercel.app/"
+          image={githubImg}
+        />
+        <ProjectCard
+          title="REVENUE RECOVERY SYSTEM "
+          category="WEB APP"
+          year="2026"
+          link="https://github-intelligence-one.vercel.app/"
+          image={revive}
+        />
+        <ProjectCard
+          title="SELF HEALING BACKEND SYSTEM "
           category="WEB APP"
           year="2026"
           link="https://github-intelligence-one.vercel.app/"
