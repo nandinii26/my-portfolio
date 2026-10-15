@@ -32,6 +32,13 @@ export default function GlassBackground() {
   const y8 = useTransform(scrollYProgress, [0, 1], ['340vh', '10vh']);
   const r8 = useTransform(scrollYProgress, [0, 1], [15, -8]);
 
+  const y9 = useTransform(scrollYProgress, [0, 1], ['290vh', '50vh']);
+  const r9 = useTransform(scrollYProgress, [0, 1], [15, -8]);
+
+   const y10 = useTransform(scrollYProgress, [0, 1], ['400vh', '50vh']);
+  const r10 = useTransform(scrollYProgress, [0, 1], [15, -8]);
+
+
   return (
     <div
       aria-hidden="true"
@@ -86,6 +93,16 @@ export default function GlassBackground() {
       <motion.div
         style={{ y: y8, rotate: r8 }}
         className="hero-static-glass absolute right-[7%] top-[10%] h-[32vh] w-[30vw] min-w-[220px] max-w-[440px]"
+      />
+
+      {/* Shard 9 (Bottom Center - End of Page) */}
+      <motion.div
+        style={{ y: y9, rotate: r9 }}
+        className="hero-static-glass absolute left-[50%] top-[10%] h-[32vh] w-[30vw] min-w-[220px] max-w-[440px]"
+      />
+        <motion.div
+        style={{ y: y10, rotate: r10 }}
+        className="hero-static-glass absolute left-[10%] top-[5%] h-[32vh] w-[30vw] min-w-[220px] max-w-[440px]"
       />
     </div>
   );
