@@ -1,17 +1,16 @@
-import React from 'react'
-import Navbar from '@/components/Navbar'
+import React from 'react';
+import Navbar from '@/components/Navbar';
+import ContactSection from '@/components/Contact/Contact';
+import Footer from '@/components/footer';
 
-const Contact = () => {
+export default function ContactPage() {
   return (
-        <>
-     <Navbar/>
-    <div className="flex flex-col flex-1 items-center justify-center  h-200 
-    bg-gradient-to-r from-purple-900 to-black text-white"> 
-       
-      contacts
-    </div>
-    </>
-  )
+    <main className="relative min-h-screen bg-[#070707] text-white pt-24">
+      <Navbar />
+      <div className="mx-auto max-w-6xl py-8">
+        <ContactSection />
+      </div>
+      <Footer />
+    </main>
+  );
 }
-
-export default Contact

@@ -22,7 +22,7 @@ export default function Hero() {
   const screenScale = useTransform(scrollYProgress, [0, 0.6], [0.96, 1]);
 
   return (
-    <section ref={containerRef} className="hero-grid relative h-[300vh] bg-transparent text-white">
+    <section id="home" ref={containerRef} className="hero-grid relative h-[300vh] bg-transparent text-white">
       <div className="relative z-10 sticky top-0 flex h-screen flex-col items-center justify-center overflow-hidden px-5">
         <motion.div
           style={{ opacity: headingOpacity, x: headingX, y: headingY, scale: headingScale }}

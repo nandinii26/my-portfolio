@@ -41,9 +41,10 @@ const skills = [
 export default function Skills() {
   return (
     <section
-      id="skills"
+      id="about"
       className="bg-black px-6 py-24 text-white md:px-12 lg:px-20"
     >
+      <span id="skills" className="sr-only" />
       <p className="mb-5 text-xs tracking-[0.2em] text-white/40">
         02 / CAPABILITIES
       </p>
